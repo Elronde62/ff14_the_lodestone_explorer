@@ -1,0 +1,66 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "jobList": "Job List",
+  "@jobList": {
+    "description": "The Job List text displayed on the character view"
+  },
+  "navbarSearch": "Search",
+  "@navbarSearch": {
+    "description": "The bottom navbar text label for search"
+  },
+  "navbarFavorites": "Favorites",
+  "@navbarFavorites": {
+    "description": "The bottom navbar text label for favorites"
+  },
+  "yesButton": "Yes",
+  "@yesButton": {
+    "description": "The standard Yes Button"
+  },
+  "noButton": "No",
+  "@noButton": {
+    "description": "The standard No button"
+  },
+  "favoriteDialogTitle": "Confirmation",
+  "@favoriteDialogTitle": {
+    "description": "The title of the confirmation dialog on favorite character"
+  },
+  "favoriteDialogContent": "Are you sure that you want to add this character to your favorite ?",
+  "@favoriteDialogContent": {
+    "description": "The content of the confirmation dialog on favorite character"
+  },
+  "unfavoriteDialogTitle": "Confirmation",
+  "@unfavoriteDialogTitle": {
+    "description": "The title of the confirmation dialog on unfavorite character"
+  },
+  "unfavoriteDialogContent": "Are you sure that you want to remove this character from your favorite ?",
+  "@unfavoriteDialogContent": {
+    "description": "The content of the confirmation dialog on unfavorite character"
+  },
+  "noCharacters": "There are currently no characters in your favorite list, please add some character to your favorites to fill this view",
+  "@noCharacters": {
+    "description": "The text displayed when there are no characters in the favorites"
+  },
+  "myCharacters": "My characters",
+  "@myCharacters": {
+    "description": "My characters displayed on homepage with favorites characters"
+  },
+  "searchCharacters": "Search for a character",
+  "@searchCharacters": {
+    "description": "The text displayed in the title part of the character search"
+  },
+  "noResultSearchCharacters": "No results for this character name",
+  "@noResultSearchCharacters": {
+    "description": "The text displayed when they're no results in the search from the server"
+  },
+  "details": "Details",
+  "@details": {
+    "description": "The details transalation"
+  },
+  "characterGears": "Gears",
+  "@characterGears": {
+    "description": "The displayed on the character gears view"
+  }
+}

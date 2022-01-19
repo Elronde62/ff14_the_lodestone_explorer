@@ -1,0 +1,18 @@
+{
+  "helloWorld": "Bonjour le monde !",
+  "jobList": "Liste des jobs",
+  "navbarSearch": "Recherche",
+  "navbarFavorites": "Favories",
+  "yesButton": "Oui",
+  "noButton": "Non",
+  "favoriteDialogTitle": "Confirmation",
+  "favoriteDialogContent": "Etes-vous sûr de vouloir ajouter ce personnage à vos favories ?",
+  "unfavoriteDialogTitle": "Confirmation",
+  "unfavoriteDialogContent": "Etes-vous sûr de vouloir supprimer ce personnage de vos favories ?",
+  "noCharacters": "Il n'y a actuellement aucun personnages dans vos favories. Ajoutez y des personnages afin de remplir cette vue.",
+  "myCharacters": "Mes personnages",
+  "searchCharacters": "Recherche de personnage",
+  "noResultSearchCharacters": "Pas de résultat pour ce nom",
+  "details": "Details",
+  "characterGears": "Equipements"
+}
