@@ -1,16 +1,29 @@
-# ff14_mobile_app
+# FF14 | The lodestone explorer
 
-A flutter vitrine project
+A flutter demonstration project built to improve my own experience of flutter. I made that apps only because I spent a lot of time on FF14 and really enjoyed that game. 
 
-## Getting Started
+# Functionalities
 
-This project is a starting point for a Flutter application.
+This project is currently available on Android and allow the user to tracks of its and friends characters on the popular game Final Final XIV edited by Square Enix. 
+* User can search for a character
+* User can mark a character as a favorite
+* User can see his favorites characters on the homepage
+* When tapping on a character, are displayed multiples informations such as jobs, weapons
 
-A few resources to get you started if this is your first Flutter project:
+# API
+This project heavily depends on the project XIV API project, available here [XIV API DOCS](https://xivapi.com/docs).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Collaborating
+
+Feel free, to collaborate to this project and add whatever you want while it is compatible with the app scope, I will take a look on it and check if I can integrate your MR .
+
+## Knowledge required for collaborating
+* Flutter
+* Bloc pattern
+* REST API
+
+# Further improvements
+* Shipping the app with icons in it to avoid downloading them every time.
+* Keeps more data in cache
+* Adding a quests and items search
