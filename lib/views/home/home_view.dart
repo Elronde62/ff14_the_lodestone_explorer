@@ -13,19 +13,20 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(8),
-      margin: const EdgeInsets.only(top: 4),
+      margin: const EdgeInsets.only(top: 6, bottom: 4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(AppLocalizations.of(context)!.myCharacters, style: Theme.of(context).textTheme.headline5,),
-          const Divider(height: 2.5, thickness: 2,),
+          const Divider(height: 5, thickness: 2,),
           Expanded(
             child: ListView(
               children: [
                 for(Character char in favoritesCharacters)
                   GestureDetector(
                       onTap: () {
+                        var playerConst = CharacterProvider(id: char.id);
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CharacterProvider(id: char.id)));
                       },
                       child: CharacterTile(character: char)

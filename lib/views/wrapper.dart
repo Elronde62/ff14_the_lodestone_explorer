@@ -17,11 +17,13 @@ class _WrapperState extends State<Wrapper> {
   _updateSelectedIndex(int index){
     setState(() {
       _selectedNavigationIndex = index;
+      _pageController.animateToPage(index, duration: const Duration(microseconds: 450), curve: Curves.easeIn);
     });
   }
 
   // List of all widgets displayable
   static const pageList = [HomeProvider(), SearchProvider()];
+  final PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,11 @@ class _WrapperState extends State<Wrapper> {
           selectedIndex: _selectedNavigationIndex,
           selectedCallback: _updateSelectedIndex,
         ),
-        body: pageList[_selectedNavigationIndex]
+        body: PageView(
+          controller: _pageController,
+          children: pageList,
+          onPageChanged: _updateSelectedIndex,
+        )
     );
   }
 }

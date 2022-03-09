@@ -19,11 +19,12 @@ class SearchBuilder extends StatefulWidget {
 class _SearchBuilderState extends State<SearchBuilder> {
 
   late Timer _debounce;
+  TextEditingController searchController = TextEditingController();
 
   /// Handle on change debouncer to avoid to many queries
   _onSearchChanged(String value) {
 
-    _debounce = Timer(const Duration(milliseconds: 500), () {
+    _debounce = Timer(const Duration(seconds: 1), () {
       if(value.length > 3) {
         BlocProvider.of<SearchBloc>(context).add(SearchCharacterEvent(searchInput: value));
       }
@@ -43,12 +44,17 @@ class _SearchBuilderState extends State<SearchBuilder> {
           Container(
             margin: const EdgeInsets.only(bottom: 8),
             child: TextFormField(
+              controller: searchController,
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: CustomTheme.regularBorderRadius
                   )
               ),
-              onChanged: _onSearchChanged,
+              onEditingComplete:  () {
+                if(searchController.text.length > 3) {
+                  BlocProvider.of<SearchBloc>(context).add(SearchCharacterEvent(searchInput: searchController.text));
+                }
+              },
             ),
           ),
           const Divider(thickness: 2, height: 4,),

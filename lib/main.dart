@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'FF14 | The Lodestone Explorer',
+      debugShowCheckedModeBanner: false,
       theme: FlexThemeData.light(scheme: FlexScheme.blumineBlue),
       // The Mandy red, dark theme.
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.blumineBlue),
