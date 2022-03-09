@@ -26,7 +26,6 @@ class HomeView extends StatelessWidget {
                 for(Character char in favoritesCharacters)
                   GestureDetector(
                       onTap: () {
-                        var playerConst = CharacterProvider(id: char.id);
                         Navigator.push(context, MaterialPageRoute(builder: (context) => CharacterProvider(id: char.id)));
                       },
                       child: CharacterTile(character: char)

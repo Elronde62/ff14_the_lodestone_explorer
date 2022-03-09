@@ -21,17 +21,6 @@ class _SearchBuilderState extends State<SearchBuilder> {
   late Timer _debounce;
   TextEditingController searchController = TextEditingController();
 
-  /// Handle on change debouncer to avoid to many queries
-  _onSearchChanged(String value) {
-
-    _debounce = Timer(const Duration(seconds: 1), () {
-      if(value.length > 3) {
-        BlocProvider.of<SearchBloc>(context).add(SearchCharacterEvent(searchInput: value));
-      }
-    });
-
-  }
-
   @override
   Widget build(BuildContext context) {
 
