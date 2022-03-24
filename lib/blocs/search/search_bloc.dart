@@ -12,12 +12,15 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
 
     on<SearchEvent>((event, emit) async {
         if(event is SearchCharacterEvent) {
+          // Trigger the searching state
+          emit(SearchingCharactersState());
+
           List<Character> characters = await characterService.findByCharacterByName(event.searchInput);
           // Return the empty state
           if(characters.isEmpty) {
-            emit(NoResultSearchCharacters());
+            emit(NoResultSearchCharactersState());
           } else {
-            emit(SearchCharactersFetched(characters: characters));
+            emit(SearchCharactersFetchedState(characters: characters));
           }
 
         }

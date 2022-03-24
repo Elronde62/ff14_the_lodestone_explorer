@@ -9,19 +9,23 @@ class SearchInitial extends SearchState {
   List<Object> get props => [];
 }
 
-class SearchCharactersFetched extends SearchState {
+class SearchCharactersFetchedState extends SearchState {
   final List<Character> characters;
 
-  const SearchCharactersFetched({required this.characters});
+  const SearchCharactersFetchedState({required this.characters});
 
   @override
   List<Object> get props => [characters];
 }
 
-class NoResultSearchCharacters extends SearchState {
+class NoResultSearchCharactersState extends SearchState {
 
   @override
   List<Object?> get props => [];
+}
 
+class SearchingCharactersState extends SearchState {
 
+  @override
+  List<Object?> get props => [];
 }

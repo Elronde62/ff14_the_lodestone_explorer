@@ -10,24 +10,21 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   group('end-to-end test', () {
-    testWidgets('Verifiy character search',
-            (WidgetTester tester) async {
+    testWidgets('Verify if the character search bar is accessible',   (WidgetTester tester) async {
+          // Loading app
           await app.main();
           await tester.pumpAndSettle();
-          print("Debut test");
 
           // Finds the floating action button to tap on.
           final Finder navBarSearch = find.byIcon(Icons.list);
-          print("Navbar trouvé");
 
-          print(navBarSearch);
           // Emulate a tap on the floating action button.
           await tester.tap(navBarSearch);
 
           // Trigger a frame.
           await tester.pumpAndSettle();
 
-          // Find the searbar
+          // Find the searchbar
           final Finder searchBar = find.byType(TextFormField);
 
           await tester.tap(searchBar);

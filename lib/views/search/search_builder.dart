@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:ff14_mobile_app/blocs/search/search_bloc.dart';
 import 'package:ff14_mobile_app/components/loading_indicator.dart';
 import 'package:ff14_mobile_app/config/custom_theme.dart';
@@ -18,7 +16,6 @@ class SearchBuilder extends StatefulWidget {
 
 class _SearchBuilderState extends State<SearchBuilder> {
 
-  late Timer _debounce;
   TextEditingController searchController = TextEditingController();
 
   @override
@@ -49,12 +46,13 @@ class _SearchBuilderState extends State<SearchBuilder> {
           const Divider(thickness: 2, height: 4,),
           BlocBuilder<SearchBloc, SearchState>(
             builder: (context, state) {
-              if(state is SearchCharactersFetched) {
+              if(state is SearchCharactersFetchedState) {
                 return SearchView(characters: state.characters);
-              } else if(state is NoResultSearchCharacters) {
+              } else if(state is NoResultSearchCharactersState) {
                 return const SearchEmpty();
+              } else if(state is SearchingCharactersState) {
+                return const LoadingIndicator();
               }
-
               return const LoadingIndicator();
             },
           ),
@@ -65,7 +63,6 @@ class _SearchBuilderState extends State<SearchBuilder> {
 
   @override
   void dispose() {
-    _debounce.cancel();
     super.dispose();
   }
 }
