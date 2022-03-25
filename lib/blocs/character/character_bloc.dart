@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:ff14_mobile_app/models/character.dart';
-import 'package:ff14_mobile_app/repositories/favories_repository.dart';
+import 'package:ff14_mobile_app/repositories/favorites_repository.dart';
 import 'package:ff14_mobile_app/services/character_service.dart';
 import 'package:ff14_mobile_app/services/favorites_service.dart';
 

@@ -1,5 +1,5 @@
 import 'package:ff14_mobile_app/models/character.dart';
-import 'package:ff14_mobile_app/repositories/favories_repository.dart';
+import 'package:ff14_mobile_app/repositories/favorites_repository.dart';
 
 /// A Favorites [Service] that handle favorites calls
 ///
