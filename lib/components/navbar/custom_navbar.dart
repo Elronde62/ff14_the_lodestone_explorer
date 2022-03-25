@@ -2,12 +2,14 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+/// A Custom navbar that takes a [selectedCallback] callback
+///
+/// {@category Components}
 class CustomNavbar extends StatelessWidget {
   final Function(int) selectedCallback;
   final int selectedIndex;
 
   const CustomNavbar({Key? key, required this.selectedIndex, required this.selectedCallback }) : super(key: key);
-
 
 
   @override

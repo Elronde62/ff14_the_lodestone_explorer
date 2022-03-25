@@ -1,5 +1,8 @@
 import 'package:ff14_mobile_app/core/model.dart';
 
+/// A ClassJobUnlockedState model that parse data from API
+///
+/// {@category Models}
 class ClassJobUnlockedState extends Model {
 
   final int id;

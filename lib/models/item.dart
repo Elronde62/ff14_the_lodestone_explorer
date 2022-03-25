@@ -3,6 +3,9 @@ import 'package:ff14_mobile_app/core/model.dart';
 import 'package:ff14_mobile_app/models/class_job_category.dart';
 import 'package:ff14_mobile_app/models/item_ui_category.dart';
 
+/// A Item model that parse data from API
+///
+/// {@category Models}
 class Item extends Model {
 
   final ClassJobCategory classJobCategory;

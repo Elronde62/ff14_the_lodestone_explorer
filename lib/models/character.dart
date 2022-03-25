@@ -4,6 +4,9 @@ import 'package:ff14_mobile_app/models/class_job.dart';
 
 import 'mount.dart';
 
+/// A character model that parse data from API
+///
+/// {@category Models}
 class Character extends Model {
 
   int id;

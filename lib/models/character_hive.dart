@@ -2,6 +2,9 @@ import 'package:hive/hive.dart';
 
 part 'character_hive.g.dart';
 
+/// A character model that parse data to local Hive
+///
+/// {@category Models}
 @HiveType(typeId: 1)
 class CharacterHive {
 

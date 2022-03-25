@@ -1,23 +1,25 @@
 import 'package:ff14_mobile_app/models/character.dart';
 import 'package:ff14_mobile_app/repositories/favories_repository.dart';
 
-class FavoriesService {
+/// A Favorites [Service] that handle favorites calls
+///
+/// {@category Services}
+class FavoritesService {
 
-  final FavoritesRepository favoriesRepository = FavoritesRepository();
+  final FavoritesRepository favoritesRepository = FavoritesRepository();
 
-  void storeCharacterAsFavorite(Character character) {
-
-  }
-
+  /// Remove a specific [Character] from lom favorites by it's [characterId]
   void removeCharacterFromFavorite(int characterId) {
-    favoriesRepository.removeCharacterFromFavorites(characterId);
+    favoritesRepository.removeCharacterFromFavorites(characterId);
   }
 
+  /// Get a list of every [Character] stored in local
   List<Character> getFavoritesCharacters() {
-    return favoriesRepository.getFavoritesCharacters();
+    return favoritesRepository.getFavoritesCharacters();
   }
 
+  /// Check if a [Character] is already stored as favorites by its [characterId]
   bool isCharacterAlreadyFavorite(int characterId) {
-    return favoriesRepository.getCharacter(characterId) != null;
+    return favoritesRepository.getCharacter(characterId) != null;
   }
 }

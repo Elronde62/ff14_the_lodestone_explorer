@@ -4,6 +4,9 @@ import 'package:ff14_mobile_app/models/job.dart';
 
 import '../core/model.dart';
 
+/// A ClassJob model that parse data from API
+///
+/// {@category Models}
 class ClassJob extends Model {
 
   final int expLevel;

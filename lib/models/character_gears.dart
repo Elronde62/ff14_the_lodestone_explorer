@@ -2,6 +2,9 @@ import 'package:ff14_mobile_app/core/model.dart';
 
 import 'gear.dart';
 
+/// A gears model that parse data from API
+///
+/// {@category Models}
 class CharacterGears extends Model {
 
   final Gear body;

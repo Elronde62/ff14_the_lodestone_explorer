@@ -1,19 +1,21 @@
 import 'package:ff14_mobile_app/core/repository.dart';
 import 'package:ff14_mobile_app/models/character.dart';
-import 'package:logger/logger.dart';
 
+/// Character [Repository] that handle character resource retrieving
+///
+/// {@category Repositories}
 class CharacterRepository extends Repository {
-  Logger l = Logger();
 
-  /// Find a list of characters by name
+  /// Find a list of characters by [characterName]
   ///
-  /// @param String characterName: The name of the character
-  /// Return a list of characters that correspond to the search
+  /// [characterName] : The character's name
+  /// Return a list of [Character] that correspond to the search or an empty array if not matching resources
   Future<List<Character>> findCharactersByName(String characterName) async {
     /// Convert space to +
     characterName.replaceAll(' ', '+');
     var response = await getHttp("/character/search?name=$characterName");
 
+    // When no response, then return an empty array
     if(response == null) {
       return [];
     }
@@ -29,10 +31,10 @@ class CharacterRepository extends Repository {
     return characters;
   }
 
-  /// Find a specific character by it's id
+  /// Find a specific character by it's [id]
   ///
-  /// @param int characterId: The character's id
-  /// Return a character by it's id
+  ///  [characterId] : The character's id
+  /// Return a [Character] by it's id
   Future<Character> findCharacterById(int characterId, {int isExtended = 1}) async {
     var response = await getHttp("/character/${characterId.toString()}?extended=$isExtended&data=MIMO");
     var data = response.data;

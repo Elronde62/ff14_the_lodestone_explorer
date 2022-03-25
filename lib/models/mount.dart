@@ -1,5 +1,8 @@
 import 'package:ff14_mobile_app/core/model.dart';
 
+/// A Mount model that parses data from API
+///
+/// {@category Models}
 class Mount extends Model {
 
   final String name;

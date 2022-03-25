@@ -1,5 +1,8 @@
 import 'package:ff14_mobile_app/core/model.dart';
 
+/// A Character Class model that parse data from API
+///
+/// {@category Models}
 class ClassCharacter extends Model {
 
   final String abbreviation;

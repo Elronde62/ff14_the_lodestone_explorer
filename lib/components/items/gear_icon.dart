@@ -1,6 +1,9 @@
 import 'package:ff14_mobile_app/models/gear.dart';
 import 'package:flutter/material.dart';
 
+/// A gear icon tile containing a [Gear] picture
+///
+/// {@category Components}
 class GearIcon extends StatelessWidget {
   final Gear gear;
   const GearIcon({Key? key, required this.gear}) : super(key: key);

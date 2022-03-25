@@ -1,5 +1,8 @@
 import 'package:ff14_mobile_app/core/model.dart';
 
+/// A ClassJobCategory model that parse data from API
+///
+/// {@category Models}
 class ClassJobCategory extends Model {
 
   final int id;

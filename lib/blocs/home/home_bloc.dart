@@ -8,7 +8,7 @@ part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitial()) {
-    FavoriesService favoriesService = FavoriesService();
+    FavoritesService favoriesService = FavoritesService();
     on<HomeEvent>((event, emit) {
 
       if(event is FetchCharactersHomeEvent) {

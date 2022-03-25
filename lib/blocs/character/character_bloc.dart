@@ -12,7 +12,7 @@ class CharacterBloc extends Bloc<CharacterEvent, CharacterState> {
   CharacterBloc() : super(CharacterInitial()) {
     on<CharacterEvent>((event, emit) async {
       CharacterService characterService = CharacterService();
-      FavoriesService favoriesService = FavoriesService();
+      FavoritesService favoriesService = FavoritesService();
 
       if(event is FetchCharacterByIdEvent) {
         Character char = await characterService.findCharacterById(event.id);

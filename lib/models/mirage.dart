@@ -1,5 +1,8 @@
 import 'package:ff14_mobile_app/core/model.dart';
 
+/// A Mirage model that parses data from API
+///
+/// {@category Models}
 class Mirage extends Model {
 
   final int id;

@@ -5,6 +5,9 @@ import 'package:ff14_mobile_app/models/item_ui_category.dart';
 import 'item.dart';
 import 'mirage.dart';
 
+/// A Gear model that parse data from API
+///
+/// {@category Models}
 class Gear extends Model {
 
   final Item item;

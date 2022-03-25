@@ -3,6 +3,9 @@ import 'package:ff14_mobile_app/models/character.dart';
 import 'package:ff14_mobile_app/views/characters/character_provider.dart';
 import 'package:flutter/material.dart';
 
+/// A character tile containing its name, server and avatar
+///
+/// {@category Components}
 class CharacterTile extends StatelessWidget {
   final Character character;
   const CharacterTile({Key? key, required this.character}) : super(key: key);
