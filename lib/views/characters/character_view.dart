@@ -42,7 +42,7 @@ class _CharacterViewState extends State<CharacterView> {
     }
   }
 
-  /// Is gears enabled
+  /// Bool used to switch view between character and gears
   bool _isGearsEnabled() {
     return _currentDisplayedWidget is CharacterGearsList;
   }
@@ -118,6 +118,9 @@ class _CharacterViewState extends State<CharacterView> {
     );
   }
 
+  /// Show the favorite dialog to confirm the choice
+  ///
+  /// [context] : Currents widget context
   _showFavoriteDialog(BuildContext context) {
     showDialog(
         context: (context),
@@ -144,6 +147,9 @@ class _CharacterViewState extends State<CharacterView> {
     );
   }
 
+  /// Show the unfavorite dialog to confirm the choice
+  ///
+  /// [context] : Currents widget context
   _showUnfavoriteDialog(BuildContext context) {
     showDialog(
         context: (context),
